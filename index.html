@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRCP(UK) Exam Guide 2026 — Your Roadmap to Success</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0f2040;
+      --navy-light: #162d55;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-pale: #f5e6c0;
+      --cream: #faf6ee;
+      --text: #1a2640;
+      --text-light: #4a5568;
+      --border: rgba(201,168,76,0.25);
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(201,168,76,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 0.4em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+
+    .hero-stat { text-align: center; }
+    .hero-stat .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+    .hero-stat .lbl {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+    }
+
+    .btn {
+      padding: 0.85rem 2.2rem;
+      border-radius: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── NAV ──────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,22,40,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.82rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .nav-links a:hover { color: var(--gold); background: rgba(201,168,76,0.08); }
+
+    /* ── MAIN CONTAINER ───────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    section { padding: 6rem 0; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    p { color: var(--text-light); line-height: 1.8; font-size: 1.05rem; }
+
+    /* ── STRUCTURE SECTION ────────────────────────────── */
+    #structure { background: var(--white); }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .part-card {
+      border: 1px solid #e2d9c6;
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      background: var(--cream);
+    }
+    .part-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,22,40,0.1); }
+
+    .part-card::before {
+      content: attr(data-num);
+      position: absolute;
+      top: -0.3rem;
+      right: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(201,168,76,0.1);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .part-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .part-card .tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      color: #8a6a1a;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.08em;
+    }
+
+    .part-card p { font-size: 0.93rem; margin-bottom: 1rem; }
+
+    .detail-list { list-style: none; }
+    .detail-list li {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .detail-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.75rem;
+    }
+
+    /* ── TIMELINE SECTION ─────────────────────────────── */
+    #timeline { background: var(--navy); }
+    #timeline h2 { color: var(--white); }
+    #timeline .section-label { color: var(--gold); }
+
+    .timeline {
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .tl-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .tl-dot {
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--navy-light);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+
+    .tl-body {
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      flex: 1;
+      transition: border-color 0.25s;
+    }
+    .tl-body:hover { border-color: rgba(201,168,76,0.5); }
+
+    .tl-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-body .period {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .tl-body p { color: rgba(255,255,255,0.6); font-size: 0.92rem; margin-bottom: 0.8rem; }
+
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+    .tl-tag {
+      font-size: 0.72rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      background: rgba(201,168,76,0.1);
+      color: var(--gold-light);
+      font-family: 'DM Mono', monospace;
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+
+    /* ── RESOURCES SECTION ────────────────────────────── */
+    #resources { background: var(--cream); }
+
+    .res-category { margin-bottom: 3.5rem; }
+
+    .res-category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .res-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .res-card {
+      background: var(--white);
+      border: 1px solid #e2d9c6;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .res-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(10,22,40,0.08);
+    }
+
+    .res-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(201,168,76,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .res-info h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.93rem;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .res-info p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .res-info .res-link {
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+      margin-top: 0.3rem;
+      display: block;
+      word-break: break-all;
+    }
+
+    /* ── PACES SECTION ────────────────────────────────── */
+    #paces { background: var(--white); }
+
+    .paces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .paces-station {
+      background: var(--cream);
+      border: 1px solid #e2d9c6;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.25s;
+    }
+    .paces-station:hover { background: var(--navy); border-color: var(--gold); }
+    .paces-station:hover h4,
+    .paces-station:hover p { color: var(--white); }
+    .paces-station:hover .st-num { color: var(--gold); }
+
+    .st-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .paces-station h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .paces-station p { font-size: 0.8rem; color: var(--text-light); }
+
+    /* ── TIPS SECTION ─────────────────────────────────── */
+    #tips { background: var(--navy); }
+    #tips h2 { color: var(--white); }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 680px) { .tips-grid { grid-template-columns: 1fr; } }
+
+    .tip-card {
+      border-radius: 8px;
+      padding: 1.75rem;
+      border: 1px solid;
+    }
+
+    .tip-card.strength {
+      background: rgba(201,168,76,0.07);
+      border-color: rgba(201,168,76,0.25);
+    }
+
+    .tip-card.danger {
+      background: rgba(255,80,80,0.05);
+      border-color: rgba(255,100,100,0.2);
+    }
+
+    .tip-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .tip-card.strength h3 { color: var(--gold); }
+    .tip-card.danger h3 { color: #ff8080; }
+
+    .tip-card ul { list-style: none; }
+    .tip-card ul li {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .tip-card.strength ul li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.65rem; top: 0.55rem; }
+    .tip-card.danger ul li::before { content: '⚠'; position: absolute; left: 0; color: #ff8080; font-size: 0.65rem; top: 0.5rem; }
+
+    /* ── BOOKING SECTION ──────────────────────────────── */
+    #booking { background: var(--cream); }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .booking-card {
+      background: var(--white);
+      border: 1px solid #e2d9c6;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .booking-card h4 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .booking-card .value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .booking-card p { font-size: 0.85rem; color: var(--text-light); margin-top: 0.4rem; }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.82rem;
+    }
+
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero-stats { gap: 1.5rem; }
+      .nav-links { display: none; }
+      .timeline::before { left: 22px; }
+      .tl-dot { width: 46px; height: 46px; font-size: 0.7rem; }
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- ─── HERO ──────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <span class="hero-badge">Indian Cardiologist Edition · 2026</span>
+  <h1>MRCP<span>(UK)</span><br>Exam Guide</h1>
+  <p class="hero-sub">From 25 Years of Cardiology to a Postgraduate Diploma</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">3</span><span class="lbl">Parts</span></div>
+    <div class="hero-stat"><span class="num">10</span><span class="lbl">Months</span></div>
+    <div class="hero-stat"><span class="num">650+</span><span class="lbl">Study Hours</span></div>
+  </div>
+  <div class="hero-cta">
+    <a href="#timeline" class="btn btn-gold">View Roadmap</a>
+    <a href="#resources" class="btn btn-outline">Study Resources</a>
+  </div>
+</section>
+
+<!-- ─── NAV ───────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">MRCP·UK</a>
+    <ul class="nav-links">
+      <li><a href="#structure">Structure</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#paces">PACES</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── STRUCTURE ─────────────────────────────────────────── -->
+<section id="structure">
+  <div class="container">
+    <span class="section-label reveal">Exam Architecture</span>
+    <h2 class="reveal">Three Parts.<br>One Diploma.</h2>
+    <p class="reveal">Understanding each stage lets you allocate your energy strategically. Your cardiology expertise gives you a head-start in Parts 1 and 2, while PACES demands a different kind of preparation.</p>
+
+    <div class="parts-grid">
+      <div class="part-card reveal" data-num="1">
+        <h3>Part 1</h3>
+        <span class="tag">Written · MCQ</span>
+        <p>Two papers of 100 Best-of-Five questions each, sat on the same day. Tests clinical sciences and basic medicine across all specialties.</p>
+        <ul class="detail-list">
+          <li>200 questions total (2 × 100)</li>
+          <li>Pass mark ~55–60%</li>
+          <li>Basic sciences, genetics, pharmacology</li>
+          <li>All medical specialties covered</li>
+          <li>Held 3 times/year — Jan, May, Sept</li>
+        </ul>
+      </div>
+      <div class="part-card reveal" data-num="2">
+        <h3>Part 2 Written</h3>
+        <span class="tag">Written · Clinical</span>
+        <p>More clinically oriented with Best-of-Five and Extended Matching Questions. Tests investigation, diagnosis and evidence-based management.</p>
+        <ul class="detail-list">
+          <li>200 questions total (2 × 100)</li>
+          <li>Must pass Part 1 first</li>
+          <li>Emphasis on NICE/ESC guidelines</li>
+          <li>Data interpretation included</li>
+          <li>Held 3 times/year</li>
+        </ul>
+      </div>
+      <div class="part-card reveal" data-num="3">
+        <h3>PACES</h3>
+        <span class="tag">Clinical · OSCE</span>
+        <p>The pinnacle — 5 real-patient stations. Tests clinical examination, history taking, communication, and data interpretation under observation.</p>
+        <ul class="detail-list">
+          <li>5 stations × 20 minutes</li>
+          <li>Real patients with real signs</li>
+          <li>Communication skills critical</li>
+          <li>Examiner marks in real time</li>
+          <li>Available at Indian centres</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TIMELINE ───────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <span class="section-label reveal">Your 10-Month Plan</span>
+    <h2 class="reveal">The Roadmap<br>to December 2026</h2>
+    <p class="reveal" style="color:rgba(255,255,255,0.5);">Three sequential phases mapped to exam diets. Your clinical experience compresses what typically takes 18 months into 10.</p>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot">Feb<br>→<br>May</div>
+        <div class="tl-body">
+          <h3>Phase 1 — Part 1 Preparation</h3>
+          <span class="period">FEB 2026 → MAY 2026 · Target: May/June Diet</span>
+          <p>Systematic coverage of all medical specialties via question banks. Your cardiology knowledge handles 15–20% of the paper — focus energy on basic sciences, genetics, pharmacology mechanisms, and non-core specialties (dermatology, ophthalmology, psychiatry).</p>
+          <p><strong style="color:rgba(255,255,255,0.8);">Daily target:</strong> 100–120 questions/day with explanation review. Weekdays Q-bank + weekends weak topic revision.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">Passmedicine</span>
+            <span class="tl-tag">OnExamination</span>
+            <span class="tl-tag">Kumar & Clark</span>
+            <span class="tl-tag">Philip Kalra Notes</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot">Jun<br>→<br>Aug</div>
+        <div class="tl-body">
+          <h3>Phase 2 — Part 2 Written</h3>
+          <span class="period">JUNE 2026 → AUG 2026 · Target: Sept/Oct Diet</span>
+          <p>Clinical vignettes, investigation interpretation, management guidelines. Your 25 years of clinical experience will feel much more relevant here. Focus on nephrology, respiratory, gastroenterology, and rheumatology — areas where cardiologists may be rustier.</p>
+          <p><strong style="color:rgba(255,255,255,0.8);">Key focus:</strong> NICE/ESC/BTS guidelines, ECG mastery verification, evidence-based management decisions.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">Passmedicine Part 2</span>
+            <span class="tl-tag">BMJ OnExamination</span>
+            <span class="tl-tag">NICE Guidelines</span>
+            <span class="tl-tag">ESC Guidelines</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot">Oct<br>→<br>Dec</div>
+        <div class="tl-body">
+          <h3>Phase 3 — PACES Clinical</h3>
+          <span class="period">OCT 2026 → DEC 2026 · Target: Dec Diet</span>
+          <p>The most challenging stage for senior doctors — not because of knowledge, but because of style. Structured examination technique, patient-centred communication, and performing under observation require dedicated rehearsal. Video yourself, join a group, book a course.</p>
+          <p><strong style="color:rgba(255,255,255,0.8);">Critical:</strong> Attend a PACES preparation course. Practice out loud. Avoid the trap of being paternalistic in the communication station.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">PACES Course</span>
+            <span class="tl-tag">Study Group</span>
+            <span class="tl-tag">Iqbal & Iqbal</span>
+            <span class="tl-tag">Video Practice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── RESOURCES ─────────────────────────────────────────── -->
+<section id="resources">
+  <div class="container">
+    <span class="section-label reveal">Curated Study Resources</span>
+    <h2 class="reveal">Everything You<br>Need to Study</h2>
+    <p class="reveal">Every resource linked directly. Click any card to access. Prioritise question banks — they are the single most important habit.</p>
+
+    <!-- Question Banks -->
+    <div class="res-category reveal">
+      <div class="res-category-title">📚 Question Banks</div>
+      <div class="res-grid">
+        <a href="https://www.passmedicine.com" target="_blank" class="res-card">
+          <div class="res-icon">🎯</div>
+          <div class="res-info">
+            <h4>Passmedicine</h4>
+            <p>The gold standard MRCP question bank. 2000+ questions for both Part 1 and Part 2.</p>
+            <span class="res-link">passmedicine.com</span>
+          </div>
+        </a>
+        <a href="https://www.onexamination.com/products/mrcp-part-1" target="_blank" class="res-card">
+          <div class="res-icon">📝</div>
+          <div class="res-info">
+            <h4>OnExamination (BMJ)</h4>
+            <p>BMJ's comprehensive platform for Part 1 and Part 2. Clinical cases and Q&A format.</p>
+            <span class="res-link">onexamination.com</span>
+          </div>
+        </a>
+        <a href="https://www.mrcprevision.com" target="_blank" class="res-card">
+          <div class="res-icon">💡</div>
+          <div class="res-info">
+            <h4>MRCP Revision</h4>
+            <p>Dedicated MRCP revision platform with topic-by-topic breakdown and mock exams.</p>
+            <span class="res-link">mrcprevision.com</span>
+          </div>
+        </a>
+        <a href="https://zerotofinals.com/medicine/" target="_blank" class="res-card">
+          <div class="res-icon">📖</div>
+          <div class="res-info">
+            <h4>Zero to Finals</h4>
+            <p>Free high-quality notes covering all medical topics. Excellent for quick revision.</p>
+            <span class="res-link">zerotofinals.com</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Textbooks -->
+    <div class="res-category reveal">
+      <div class="res-category-title">📗 Essential Textbooks</div>
+      <div class="res-grid">
+        <a href="https://www.elsevier.com/books/kumar-and-clarks-clinical-medicine/kumar/978-0-7020-7870-5" target="_blank" class="res-card">
+          <div class="res-icon">🩺</div>
+          <div class="res-info">
+            <h4>Kumar & Clark's Clinical Medicine</h4>
+            <p>The standard reference for MRCP. Read selectively based on weak areas flagged by Q-banks.</p>
+            <span class="res-link">elsevier.com</span>
+          </div>
+        </a>
+        <a href="https://www.amazon.co.uk/MRCP-Part-Revision-Notes-Kalra/dp/1907904433" target="_blank" class="res-card">
+          <div class="res-icon">📋</div>
+          <div class="res-info">
+            <h4>MRCP Part 1 Revision Notes — Philip Kalra</h4>
+            <p>Highly condensed, targeted revision notes written specifically for MRCP Part 1.</p>
+            <span class="res-link">amazon.co.uk</span>
+          </div>
+        </a>
+        <a href="https://www.amazon.co.uk/MRCP-PACES-Comprehensive-Guide-Pastest/dp/1905635540" target="_blank" class="res-card">
+          <div class="res-icon">🏥</div>
+          <div class="res-info">
+            <h4>PACES for the MRCP — Iqbal & Iqbal</h4>
+            <p>The standard PACES preparation text. Covers examination technique and communication stations.</p>
+            <span class="res-link">amazon.co.uk</span>
+          </div>
+        </a>
+        <a href="https://www.amazon.co.uk/Rapid-Review-Clinical-Medicine-MRCP/dp/1905635893" target="_blank" class="res-card">
+          <div class="res-icon">⚡</div>
+          <div class="res-info">
+            <h4>Rapid Review of Clinical Medicine</h4>
+            <p>Fast-track revision resource ideal for consolidating knowledge in final weeks.</p>
+            <span class="res-link">amazon.co.uk</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Guidelines -->
+    <div class="res-category reveal">
+      <div class="res-category-title">📜 Clinical Guidelines</div>
+      <div class="res-grid">
+        <a href="https://www.nice.org.uk/guidance" target="_blank" class="res-card">
+          <div class="res-icon">🇬🇧</div>
+          <div class="res-info">
+            <h4>NICE Guidelines</h4>
+            <p>The authoritative UK clinical guidelines. Essential for Part 2 management questions.</p>
+            <span class="res-link">nice.org.uk/guidance</span>
+          </div>
+        </a>
+        <a href="https://www.escardio.org/Guidelines" target="_blank" class="res-card">
+          <div class="res-icon">🫀</div>
+          <div class="res-info">
+            <h4>ESC Guidelines</h4>
+            <p>European Society of Cardiology guidelines. Your natural home — and crucial for MRCP cardiology questions.</p>
+            <span class="res-link">escardio.org/Guidelines</span>
+          </div>
+        </a>
+        <a href="https://www.brit-thoracic.org.uk/quality-improvement/guidelines/" target="_blank" class="res-card">
+          <div class="res-icon">🫁</div>
+          <div class="res-info">
+            <h4>BTS Guidelines</h4>
+            <p>British Thoracic Society guidelines for respiratory medicine — high yield for MRCP.</p>
+            <span class="res-link">brit-thoracic.org.uk</span>
+          </div>
+        </a>
+        <a href="https://www.bsg.org.uk/clinical-guidance/" target="_blank" class="res-card">
+          <div class="res-icon">🧫</div>
+          <div class="res-info">
+            <h4>BSG Guidelines</h4>
+            <p>British Society of Gastroenterology clinical guidelines — gastro is a common weak spot for cardiologists.</p>
+            <span class="res-link">bsg.org.uk/clinical-guidance</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Courses -->
+    <div class="res-category reveal">
+      <div class="res-category-title">🎓 Courses & Registration</div>
+      <div class="res-grid">
+        <a href="https://www.mrcpuk.org" target="_blank" class="res-card">
+          <div class="res-icon">🏛️</div>
+          <div class="res-info">
+            <h4>MRCP(UK) Official Website</h4>
+            <p>Exam registration, dates, fees, eligibility, and all official information. Start here.</p>
+            <span class="res-link">mrcpuk.org</span>
+          </div>
+        </a>
+        <a href="https://www.iscmedical.co.uk/mrcp-paces-courses.html" target="_blank" class="res-card">
+          <div class="res-icon">🎭</div>
+          <div class="res-info">
+            <h4>ISC Medical PACES Courses</h4>
+            <p>Highly regarded PACES preparation courses. Structured practice with simulated patients.</p>
+            <span class="res-link">iscmedical.co.uk</span>
+          </div>
+        </a>
+        <a href="https://www.rcplondon.ac.uk/education-practice/courses/mrcp-uk-paces-preparation-course" target="_blank" class="res-card">
+          <div class="res-icon">🏫</div>
+          <div class="res-info">
+            <h4>RCP London PACES Course</h4>
+            <p>Official Royal College of Physicians preparation course — authoritative and comprehensive.</p>
+            <span class="res-link">rcplondon.ac.uk</span>
+          </div>
+        </a>
+        <a href="https://www.medrevise.co.uk" target="_blank" class="res-card">
+          <div class="res-icon">💻</div>
+          <div class="res-info">
+            <h4>Medrevise</h4>
+            <p>Free online MRCP revision resource — good for quick topic-by-topic reading.</p>
+            <span class="res-link">medrevise.co.uk</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PACES ──────────────────────────────────────────────── -->
+<section id="paces">
+  <div class="container">
+    <span class="section-label reveal">Clinical Exam</span>
+    <h2 class="reveal">PACES — The<br>Five Stations</h2>
+    <p class="reveal">Each station is 20 minutes with a real patient and a live examiner. This is where clinical experience can work both for and against you — technique must be textbook, not habitual.</p>
+
+    <div class="paces-grid">
+      <div class="paces-station reveal">
+        <span class="st-num">01</span>
+        <h4>History Taking</h4>
+        <p>Structured, patient-centred. Must demonstrate ICE (Ideas, Concerns, Expectations).</p>
+      </div>
+      <div class="paces-station reveal">
+        <span class="st-num">02</span>
+        <h4>Examination</h4>
+        <p>Cardiovascular, respiratory, abdominal or neurological — slick, rehearsed sequence.</p>
+      </div>
+      <div class="paces-station reveal">
+        <span class="st-num">03</span>
+        <h4>Communication Skills</h4>
+        <p>Two scenarios — breaking bad news, ethics, consent. Avoid paternalism.</p>
+      </div>
+      <div class="paces-station reveal">
+        <span class="st-num">04</span>
+        <h4>Brief Clinical</h4>
+        <p>Combined history + physical examination in a shortened format.</p>
+      </div>
+      <div class="paces-station reveal">
+        <span class="st-num">05</span>
+        <h4>Data Interpretation</h4>
+        <p>ECGs, CXR, spirometry, bloods. Your strongest station as a cardiologist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TIPS ───────────────────────────────────────────────── -->
+<section id="tips">
+  <div class="container">
+    <span class="section-label reveal">Personalised Strategy</span>
+    <h2 class="reveal">Your Strengths &<br>Your Danger Zones</h2>
+    <p class="reveal" style="color:rgba(255,255,255,0.5);">25 years of cardiology shapes both your advantages and your blind spots. Plan accordingly.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card strength reveal">
+        <h3>✦ Leverage These Strengths</h3>
+        <ul>
+          <li>Cardiology stations (15–20% of Part 1) — near-perfect scores expected</li>
+          <li>ECG interpretation in PACES Station 5 — your natural home</li>
+          <li>Chest pain history — polished and authoritative</li>
+          <li>CVS examination — aortic stenosis, CCF, arrhythmias</li>
+          <li>Clinical instinct in Part 2 scenarios</li>
+          <li>Breaking bad news with real empathy — you've done this</li>
+        </ul>
+      </div>
+      <div class="tip-card danger reveal">
+        <h3>⚠ Watch These Danger Zones</h3>
+        <ul>
+          <li>Part 1 basic sciences — genetics, pharmacology mechanisms, statistics. Don't underestimate.</li>
+          <li>PACES communication station — seniors tend to be paternalistic. MRCP wants ICE-based patient-centred style.</li>
+          <li>Examination technique — must be textbook sequence, not your clinical habit. Say steps aloud.</li>
+          <li>Dermatology, ophthalmology, psychiatry — low day-to-day exposure, high exam weight.</li>
+          <li>Gastroenterology & rheumatology management guidelines in Part 2.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOKING ────────────────────────────────────────────── -->
+<section id="booking">
+  <div class="container">
+    <span class="section-label reveal">Logistics</span>
+    <h2 class="reveal">Exam Booking<br>& Key Facts</h2>
+    <p class="reveal">All three parts are available in India. No need to travel to the UK. Register at <a href="https://www.mrcpuk.org" target="_blank" style="color:var(--gold);">mrcpuk.org</a>.</p>
+
+    <div class="booking-grid">
+      <div class="booking-card reveal">
+        <h4>Part 1 Fee</h4>
+        <div class="value">~£450</div>
+        <p>Check mrcpuk.org for current rates. Fees vary by diet and location.</p>
+      </div>
+      <div class="booking-card reveal">
+        <h4>Part 2 Fee</h4>
+        <div class="value">~£550</div>
+        <p>Written paper. Held 3 times per year — check exact diet dates.</p>
+      </div>
+      <div class="booking-card reveal">
+        <h4>PACES Fee</h4>
+        <div class="value">~£800</div>
+        <p>Clinical exam. Available at select centres in India including Mumbai, Delhi.</p>
+      </div>
+      <div class="booking-card reveal">
+        <h4>Attempts Allowed</h4>
+        <div class="value">6 per part</div>
+        <p>Three years per part. You have buffer — aim to pass each first time.</p>
+      </div>
+      <div class="booking-card reveal">
+        <h4>India Centres</h4>
+        <div class="value">5+ cities</div>
+        <p>Mumbai, Delhi, Chennai, Kolkata, Hyderabad. Verify current list on mrcpuk.org.</p>
+      </div>
+      <div class="booking-card reveal">
+        <h4>Study Hours</h4>
+        <div class="value">~650 hrs</div>
+        <p>2–3 hrs weekdays + 4–5 hrs weekends over 10 months. Achievable alongside clinical work.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem; text-align:center;" class="reveal">
+      <a href="https://www.mrcpuk.org/mrcpuk-examinations/register" target="_blank" class="btn btn-gold" style="font-size:1rem; padding:1rem 2.8rem;">
+        Register at MRCP(UK) →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">MRCP(UK) 2026</div>
+  <p style="margin-bottom:1rem;">A personalised guide for an Indian cardiologist with 25 years of experience.</p>
+  <p>
+    Official exam body: <a href="https://www.mrcpuk.org" target="_blank">mrcpuk.org</a> ·
+    Questions: <a href="https://www.passmedicine.com" target="_blank">Passmedicine</a> ·
+    RCP London: <a href="https://www.rcplondon.ac.uk" target="_blank">rcplondon.ac.uk</a>
+  </p>
+  <p style="margin-top:1.5rem; font-size:0.75rem;">All fees and dates are indicative — verify on the official MRCP(UK) website before registering.</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        // stagger siblings
+        const siblings = [...e.target.parentElement.querySelectorAll('.reveal')];
+        const idx = siblings.indexOf(e.target);
+        setTimeout(() => e.target.classList.add('visible'), idx * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Smooth active nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--gold)' : '';
+    });
+  });
+</script>
+</body>
+</html>
